@@ -10,3 +10,6 @@ Aulas de Programação na Internet da turma LI51D no verão de 2020
 
 ### Moodle
 * [Moodle@ISEL](https://1920moodle.isel.pt/course/view.php?id=5032)
+
+### Mais informação
+* [Wiki](https://github.com/jtrindade/isel-pi-1920-2/wiki) deste repositório
