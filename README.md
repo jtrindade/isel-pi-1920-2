@@ -2,7 +2,7 @@
 Aulas de Programação na Internet da turma LI51D no verão de 2020
 
 ### Aulas Remotas Gravadas
-* [Educast](https://educast.fccn.pt/vod/channels/k0qyf9nr4)
+* [Educast](https://educast.fccn.pt/vod/channels/k0qyf9nr4) ([link alternativo](https://portal.educast.fccn.pt/videos?c=5727))
 
 ### Aulas Remotas
 * 4ªs feiras (14h00 .. 17h00) : [Join Zoom](https://videoconf-colibri.zoom.us/j/349356013)
