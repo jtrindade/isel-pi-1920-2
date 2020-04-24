@@ -61,13 +61,12 @@ function webapi(app, service) {
 				});
 				
 			});
-		}
-		
-	}
+		}	
+	};
 	
-	app.get('/quote', webapi.getQuote);
-	app.get('/items', webapi.getAllItems);
-	app.post('/items', webapi.createItem);
+	app.get('/quote', theWebApi.getQuote);
+	app.get('/items', theWebApi.getAllItems);
+	app.post('/items', theWebApi.createItem);
 	
 	return theWebApi;
 }
