@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>ISEL - LEIC</title>
+	</head>
+	<body>
+		<h3 id="isel">ISEL</h3>
+		<h3 id="leic">LEIC</h3>
+		
+		<input type="button" value="Press here!" onclick="butPressed();">
+		
+		<script>
+			const isel = document.querySelector('#isel');
+			const leic = document.querySelector('#leic');
+			
+			function butPressed() {
+				isel.style.color = 'red';
+				leic.style.color = 'blue';
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,22 @@
+h1 { color: blue; background-color: grey }
+h2 { background-color: grey }
+em { background-color: yellow }
+table, th, td {
+	border-style: solid;
+	border-width: 1px;
+	border-collapse: collapse
+}
+td:nth-child(1),td:nth-child(3) {
+	text-align: center
+}
+tr:nth-child(even) {
+	background-color: #dddddd
+}
+th { 
+	background-color: #808080
+}
+a:visited { color: orange }
+#isel { font-size: 200% }
+.info { color: red }
+div > p { background-color: #cccccc }
+
