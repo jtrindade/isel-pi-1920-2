@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>ISEL - LEIC - PI</title>
+	</head>
+	<body>
+		<h1>ISEL</h1>
+		<h1 style='font-size: 300%'>0</h1>
+		<input type='button' value='Hidden' id='butToggle'>
+		<div id='extras'></div>
+		
+		<script>
+			const numBox = document.querySelectorAll('h1')[1]; // not a good idea: use id instead
+			const button = document.querySelector('#butToggle');
+			const extras = document.querySelector('#extras');
+			
+			button.onclick = toggleVisibility;
+			
+			let count = 0;
+			let visible = true;
+			
+			setInterval(increment, 1000);
+			
+			function increment() {
+				count += 1;
+				if (visible) {
+					numBox.innerHTML = count;
+				}
+			}
+			
+			function toggleVisibility() {
+				visible = !visible;
+				button.value = visible ? 'Hidden' : 'Visible';
+			}
+			
+			const newButton = document.createElement('BUTTON');
+			newButton.innerHTML = 'RESET';
+			newButton.onclick = () => { count = 0; if (visible) numBox.innerHTML = 0; };
+			newButton.style.marginTop = '10px';
+			extras.appendChild(newButton);
+		</script>
+	</body>
+</html>

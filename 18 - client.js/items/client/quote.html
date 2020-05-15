@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>ITEMS</title>
+		<style>
+			h1 img {
+				height: 80px;
+				margin-right: 10px;
+				vertical-align: text-bottom
+			}
+		</style>
+	</head>
+	<body>
+		<nav>
+			<a href='/'>Home</a> | Quote | <a href='insert.html'>Insert</a> | <a href='list.html'>List</a>
+		</nav>
+	
+		<h1><img src='images/warehouse.jpg'>Quote</h1>
+
+		<p id='quoteP'>...</p>
+		
+		<script>
+			const quoteP = document.querySelector('#quoteP');
+			
+			fetch('/quote')
+			.then(response => {
+				/*
+				alert(
+					response.status
+					+ ' ' +
+					response.statusText
+				);
+				*/
+				return response.json();
+			})
+			.then(body => {
+				/*
+				alert(JSON.stringify(body));
+				*/
+				quoteP.innerHTML = body.quote;
+			});
+		</script>
+	</body>
+</html>
