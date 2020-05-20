@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>ITEMS</title>
+		<style>
+			h1 img {
+				height: 80px;
+				margin-right: 10px;
+				vertical-align: text-bottom
+			}
+		</style>
+	</head>
+	<body>
+		<nav>
+			<a href='/'>Home</a> | <a href='quote.html'>Quote</a> | Insert | <a href='list.html'>List</a>
+		</nav>
+	
+		<h1><img src='images/warehouse.jpg'>Add Item</h1>
+
+		<!-- form action='/items' method='POST' -->
+		<div>
+			<label for='itemName'>Item: </label>
+			<input type='text' id='itemName'>
+			<input type='button' id='butInsert' value='Insert'>
+		</div>
+		<!-- /form -->
+		
+		<script>
+			const txtItemName = document.querySelector('#itemName');
+			const butInsert = document.querySelector('#butInsert');
+			
+			butInsert.onclick = () => {
+				const itemName = txtItemName.value;
+				if (itemName.length == 0) {
+					alert('Item is empty.');
+					return;
+				}
+				
+				fetch('/items', {
+					method: 'POST',
+					headers: {
+						'Content-type': 'application/json',
+					},
+					body: JSON.stringify({
+						name: itemName
+					})
+				})
+				.then(response => { 
+					setTimeout(() => {
+						location.assign('/list.html');
+					}, 1200);
+				})
+			}
+		</script>
+	</body>
+</html>

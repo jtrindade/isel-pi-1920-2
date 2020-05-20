@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>ITEMS</title>
+		<style>
+			h1 img {
+				height: 80px;
+				margin-right: 10px;
+				vertical-align: text-bottom
+			}
+		</style>
+	</head>
+	<body>
+		<nav>
+			<a href='/'>Home</a> | <a href='quote.html'>Quote</a> | <a href='insert.html'>Insert</a> | List
+		</nav>
+	
+		<h1><img src='images/warehouse.jpg'>Items List</h1>
+
+		<div id='itemsContainer'></div>
+		
+		<script>
+			const itemsContainer = document.querySelector('#itemsContainer');
+		
+			fetch('/items')
+			.then(response => response.json())
+			.then(answer => { 
+				//alert(answer.items);
+				itemsContainer.innerHTML =
+					arrayToUl(answer.items);
+			})
+			
+			function arrayToUl(array) {
+				let res = '<ul>';
+				for (i in array) {
+					res += '<li>' + array[i] + '</li>';
+				}
+				res += '</ul>';
+				return res;
+			}
+		</script>
+	</body>
+</html>
