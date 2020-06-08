@@ -1,0 +1,25 @@
+.navbar {
+	display: flex;
+}
+
+.navigation {
+	flex: 3;
+}
+
+#userinfo {
+	flex: 1;
+}
+
+.userinfo {
+	float: right;
+}
+
+h1 img {
+	height: 80px;
+	margin-right: 10px;
+	vertical-align: text-bottom
+}
+
+input {
+	margin: 5px;
+}
