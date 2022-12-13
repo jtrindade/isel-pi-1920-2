@@ -13,7 +13,7 @@
     "express": "^4.17.1",
     "express-session": "^1.17.1",
     "node-fetch": "^2.6.0",
-    "passport": "^0.4.1",
+    "passport": "^0.6.0",
     "session-file-store": "^1.4.0"
   },
   "devDependencies": {
